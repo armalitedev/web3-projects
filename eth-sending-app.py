@@ -21,7 +21,7 @@ def send(a,b,c):
   elif c=='':
     err.config(text='Amount field empty')
     err.config(fg='Red')
-    err.place(x=8,y=173)
+    err.place(x=10,y=173)
   else:
     err.config(text='Sent successfuly!')
     err.config(fg='Green')
@@ -31,12 +31,13 @@ def send(a,b,c):
     'to': w3.eth.accounts[int(b)],
     'value': w3.toWei(int(c), 'ether')})
 
-  print(w3.eth.get_balance(w3.eth.accounts[0]))
-  print(w3.eth.get_balance(w3.eth.accounts[1]))
-  print(w3.eth.get_balance(w3.eth.accounts[2]))
-  print(w3.eth.get_balance(w3.eth.accounts[3]))
-  print(w3.eth.get_balance(w3.eth.accounts[4]))
-  print(w3.eth.get_balance(w3.eth.accounts[5]))
+  print('------')
+  print('Wallet 0:',w3.eth.get_balance(w3.eth.accounts[0]))
+  print('Wallet 1:',w3.eth.get_balance(w3.eth.accounts[1]))
+  print('Wallet 2:',w3.eth.get_balance(w3.eth.accounts[2]))
+  print('Wallet 3:',w3.eth.get_balance(w3.eth.accounts[3]))
+  print('Wallet 4:',w3.eth.get_balance(w3.eth.accounts[4]))
+  print('Wallet 5:',w3.eth.get_balance(w3.eth.accounts[5]))
 
 var = StringVar()
 var.set("0")
